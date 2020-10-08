@@ -23,7 +23,10 @@ steps:
 
 - script: cd ..
 - script: ls -l
-- script: locate 'whitesource'
 
+- task: SonarCloudAnalyze@1
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
 #- script: dotnet build --configuration $(buildConfiguration)
-#  displayName: 'dotnet build $(buildConfiguration)'
+ # displayName: 'dotnet build $(buildConfiguration)'
