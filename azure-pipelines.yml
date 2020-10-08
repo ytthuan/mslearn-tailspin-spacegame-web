@@ -21,7 +21,9 @@ steps:
 
 - task: WhiteSource Bolt@20
 
+- script: cd ..
 - script: ls -l
+- script: locate 'whitesource'
 
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+#- script: dotnet build --configuration $(buildConfiguration)
+#  displayName: 'dotnet build $(buildConfiguration)'
