@@ -34,6 +34,7 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
+
 - task: SonarCloudAnalyze@1
 - task: SonarCloudPublish@1
   inputs:
