@@ -31,9 +31,10 @@ steps:
     scannerMode: 'MSBuild'
     projectKey: 'mslearn-tailspin-spacegame-web'
     projectName: 'mslearn-tailspin-spacegame-web'
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
+
 - task: SonarCloudAnalyze@1
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
-#- script: dotnet build --configuration $(buildConfiguration)
- # displayName: 'dotnet build $(buildConfiguration)'
