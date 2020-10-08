@@ -20,7 +20,8 @@ steps:
     command: 'install'
 
 - task: WhiteSource Bolt@20
-  
+
+- script: ls -l
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
