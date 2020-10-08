@@ -24,6 +24,7 @@ steps:
 - script: cd ..
 - script: ls -l
 
+- task: SonarCloudPrepare@1
 - task: SonarCloudAnalyze@1
 - task: SonarCloudPublish@1
   inputs:
